@@ -4,3 +4,5 @@ One landing page with just HTML and CSS. JS was used only for Menu animations fo
 
 Sample website for beatsbydre.com
 It's responsive!
+
+https://beats-sample.netlify.app/
