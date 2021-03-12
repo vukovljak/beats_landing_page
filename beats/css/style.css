@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+body {
+  background-color: #fff;
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+  overflow-x: hidden;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.navbar .logo img {
+  width: 100%;
+}
+.navbar .logo:hover {
+  opacity: 0.6;
+}
+.navbar .menu ul {
+  display: flex;
+}
+.navbar .menu ul li {
+  list-style: none;
+  padding: 0 30px;
+}
+.navbar .menu a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar #search-btn,
+.navbar #menu-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.navbar #search-btn:hover,
+.navbar #menu-btn:hover {
+  opacity: 0.6;
+}
+#menu-btn {
+  display: none;
+}
+/*MAIN*/
+#main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+#main .content .main-text h1,
+#about .content .main-text h1,
+#headphones .content h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+#main .content .buttons,
+#about .content .buttons {
+  display: flex;
+}
+#main .content .buttons a {
+  text-decoration: none;
+  margin: 0 20px;
+}
+#main .content .btn-main,
+#about .content .btn-main,
+#grid .btn-main,
+#headphones .btn-main,
+#studio .btn-main {
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 60px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+#main .content .light,
+#headphones .light {
+  border: 1px solid rgb(58, 58, 58);
+  color: rgb(58, 58, 58);
+}
+#main .content .btn-main:hover,
+#about .content .btn-main:hover,
+#headphones .btn-main:hover,
+#studio .btn-main:hover {
+  opacity: 0.6;
+}
+#main .content .dark,
+#about .content .dark {
+  border: none;
+  color: #fff;
+  background-color: #c6a565;
+}
+#main .main-picture,
+#headphones .main-picture {
+  height: 100%;
+}
+#main .main-picture img,
+#headphones .main-picture img {
+  width: 100%;
+}
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+#about .content {
+  padding-left: 100px;
+  width: 50%;
+}
+#about .content .buttons a {
+  text-decoration: none;
+}
+#about .content .buttons i {
+  padding-right: 5px;
+}
+#about .main-picture {
+  height: 500px;
+  padding-left: 100px;
+}
+#about .main-picture img {
+  height: 100%;
+}
+#picture {
+  height: 700px;
+  position: relative;
+}
+#picture .content {
+  position: absolute;
+  background: #c6a565;
+  width: 45%;
+  left: 0;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-right-radius: 400px;
+  border-bottom-right-radius: 400px;
+  padding: 50px;
+  color: #fff;
+}
+#picture .content h1 {
+  text-transform: uppercase;
+}
+#picture .main-picture {
+  right: 10%;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+}
+#cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+}
+#cards div {
+  text-align: center;
+}
+#cards div i {
+  color: #c6a565;
+}
+#cards div p {
+  text-align: justify;
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  height: 600px;
+  padding: 10px;
+}
+#grid div {
+  transition: all 0.5s;
+}
+#grid div:first-child {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: url("../img/grid02.png") no-repeat center center/cover;
+}
+#grid div:nth-child(2) {
+  grid-column: 2/5;
+  grid-row: 1/3;
+  background: url("../img/grid01.jpg") no-repeat center center/cover;
+  position: relative;
+}
+#grid a {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+}
+#grid div:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background: url("../img/grid03.png") no-repeat center center/cover;
+}
+#grid div:first-child:hover,
+#grid div:nth-child(3):hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+#grid a,
+#headphones a,
+#studio a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 200;
+}
+#grid .btn-main {
+  border: 1px solid #c6a565;
+}
+#grid .btn-main:hover {
+  opacity: 0.5;
+}
+#headphones {
+  display: flex;
+  padding-top: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#headphones .content {
+  width: 100%;
+}
+
+#studio {
+  background: url("../img/beats.jpg") no-repeat center center/cover;
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+#studio .content {
+  position: absolute;
+  background: #000;
+  width: 40%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-right-radius: 400px;
+  border-bottom-right-radius: 400px;
+  padding: 0 50px;
+  color: #fff;
+}
+#studio .content h1 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+#studio .content p {
+  font-weight: 200;
+}
+#studio .dark {
+  background: #fff;
+  color: #000;
+}
+.footer {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer .logo {
+  display: flex;
+  text-align: center;
+  top: 0;
+}
+.footer .logo span:first-child {
+  height: 40px;
+  width: 40px;
+}
+.footer .logo img {
+  width: 100%;
+}
+.footer .products,
+.support,
+.socials {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.footer li {
+  list-style: none;
+  padding: 10px 0;
+}
+.footer h3 {
+  margin: 0;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+.footer a {
+  text-decoration: none;
+  font-weight: 200;
+  color: #000;
+}
+.footer .socials p {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .socials i {
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #main,
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+  #main .main-text {
+    padding-top: 70px;
+  }
+  #main .buttons {
+    padding: 0;
+    justify-content: center;
+  }
+  #main .main-picture,
+  #headphones .main-picture {
+    width: 300px;
+  }
+  #about .main-picture,
+  #picture .main-picture {
+    display: none;
+  }
+  #about .content {
+    padding: 0;
+    width: 80%;
+  }
+  #about .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  #picture {
+    height: 400px;
+  }
+  #picture .content {
+    width: 100%;
+    border-radius: 0;
+    padding: 0 20px;
+    height: auto;
+    position: relative;
+  }
+  #cards {
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+  }
+  #grid {
+    padding: 0;
+  }
+  #grid div:first-child,
+  #grid div:nth-child(3) {
+    display: none;
+  }
+  #grid div:nth-child(2) {
+    grid-column: 1/5;
+  }
+  #headphones {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  #studio {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    background: #000;
+  }
+  #studio .content {
+    width: 90%;
+    padding: 0 30px;
+    display: flex;
+    border-radius: 0;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  body {
+    position: relative;
+  }
+  .navbar {
+    padding-top: 20px;
+  }
+  .menu ul {
+    float: top;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+    padding-left: 0;
+  }
+  .menu {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3;
+    color: #fff;
+    transform: translateX(-500px);
+    transition: transform 0.5s ease-in-out;
+    position: fixed;
+  }
+  .navbar .menu a {
+    color: #fff;
+  }
+  .navbar .menu li {
+    margin: 10px 0;
+    border-bottom: 1px solid #fff;
+    padding: 20px 0;
+  }
+  .show {
+    transform: translateX(0px);
+  }
+}
+@media (max-width: 500px) {
+  #main .content {
+    height: auto;
+    width: 90%;
+  }
+  #main .content .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  #main .content .buttons a {
+    margin: 10px 0;
+  }
+  #picture {
+    background-color: #c6a565;
+    margin: 10px 0;
+  }
+  #picture .content {
+    width: 90%;
+    margin: auto;
+  }
+  #picture .content h1 {
+    margin: 0;
+  }
+  .container {
+    width: 85%;
+  }
+  #studio {
+    height: 700px;
+  }
+  #studio .content {
+    height: 650px;
+  }
+}
